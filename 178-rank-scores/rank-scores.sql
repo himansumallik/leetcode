@@ -1,4 +1,4 @@
 SELECT 
     score,
-    DENSE_RANK() OVER (ORDER BY score DESC) AS `rank`
+    DENSE_RANK() over (order by score desc) as 'rank'
 FROM Scores;
