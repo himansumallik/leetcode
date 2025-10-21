@@ -13,10 +13,8 @@ public:
 
             if(nums[mid] > target){
                 end = mid -  1;
-            }else if(nums[mid] < target){
+            }else {
                 start = mid + 1;
-            }else{
-                return mid - 1;
             }
         }
         return start;
