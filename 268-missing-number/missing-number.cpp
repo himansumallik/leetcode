@@ -3,17 +3,27 @@ public:
     int missingNumber(vector<int>& nums) {
         int n = nums.size();
 
-        int totalsum;
-        for(int i=1; i<=n; i++){
-            totalsum += i;
-        }
+        // int totalsum;
+        // for(int i=1; i<=n; i++){
+        //     totalsum += i;
+        // }
 
-        int sum = 0;
-        for(int i: nums){
-            sum += i;
-        }
+        // int sum = 0;
+        // for(int i: nums){
+        //     sum += i;
+        // }
 
-        return totalsum - sum;
+        // return totalsum - sum;
+
+        sort(nums.begin(), nums.end());
+        int missingVal;
+        for(int i=0; i<n; i++){
+            if(nums[i]!=i){
+                missingVal = i;
+                break;
+            }
+        }
+        return missingVal;
         
     }
 };
